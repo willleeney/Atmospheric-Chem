@@ -84,18 +84,12 @@ def add_reset(s, path):
     
     return path
 
-def IsoValid(Isomers, potential):
-    # INPUT: Isomers-list of isomers for current No. Carbons, potential-potential new isomer # 
-    # OUTPUT: Boolean validity of isomer #
-    if Chem.MolFromSmiles(potential) is None: # if the SMILE string is not valid
-        return False
-    if Isomers.get(Chem.MolToSmiles(Chem.MolFromSmiles(potential))) != None:
-        return False # then it is not valid  
-    return True
-
 
 
 ############################################# FINDING ALKANES #####################################################
+
+from rdkit import Chem
+import pickle
 
 alkanes = {'C': 1, 'CC': 2, 'CCC': 3, 'CCCC': 4, 'CCCCC': 5, 'CCCCCC': 6, 'CCCCCCC': 7, 'CCCCCCCC': 8, 'CCCCCCCCC': 9, 'CCCCCCCCCC': 10}  # the list containing all isomers
 no_isomers = [1,1,1,2,3,5,9,18,35,75] # the number of isomers for each hydrocarbon
@@ -127,4 +121,5 @@ for n in range(0,10): # the current hydrocarbon
             alkanes[Chem.MolToSmiles(Chem.MolFromSmiles(iso_try))] = n+1
             count += 1
 
+alkanes = pd.DataFrame({'Compound_Name': list(alkanes)}, columns = ['Compound_Name'])
 pickle.dump(alkanes, open("alkanes.p", "wb"))
