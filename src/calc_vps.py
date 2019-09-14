@@ -1,6 +1,6 @@
 ################################## ADDING PARENT COMPOUND ID ######################################################
-compound_vps = pickle.load(open('compound_vps.p', 'rb'))
-start_compounds = pickle.load(open('start_compounds.p', 'rb'))
+compound_vps = pickle.load(open('save_data/compound_vps.p', 'rb'))
+start_compounds = pickle.load(open('save_data/start_compounds.p', 'rb'))
 functional_groups = ['O', 'OO', 'C=O', 'C(=O)O', '#N', 'N', 'Cl', 'Br', 'I'] # each of the initial fun groups
 f_group_start = ['O', 'OO', 'C(=O)', 'OC(=O)', 'N#', 'N', 'Cl', 'Br', 'I']
 ind = []
@@ -139,5 +139,5 @@ for i in tqdm(range(len(all_compounds))):
 to_add1 = {'Compound_Name':list(all_compounds.loc[:, 'Compound_Name']), 'Vapour_Pressure': vps}
 to_merge1 = pd.DataFrame(to_add1, columns = ['Compound_Name', 'Vapour_Pressure'])
 all_compounds = pd.merge(all_compounds, to_merge1)
-pickle.dump(all_compounds, open('all_compounds.p', 'wb'))
+pickle.dump(all_compounds, open('save_data/all_compounds.p', 'wb'))
 

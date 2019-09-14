@@ -18,7 +18,7 @@ def new_loc(n, nest, brac):
 
 from rdkit import Chem
 
-alkanes = pickle.load(open('alkanes.p', 'rb'))
+alkanes = pickle.load(open('save_data/alkanes.p', 'rb'))
 
 allenes = {'C': 1, 'CC': 2, 'CCC': 3, 'CCCC': 4, 'CCCCC': 5, 'CCCCCC': 6, 'CCCCCCC': 7, 'CCCCCCCC': 8, 'CCCCCCCCC': 9, 'CCCCCCCCCC': 10}
 allenes = pd.DataFrame({'Compound_Name': list(allenes)}, columns = ['Compound_Name'])
@@ -58,4 +58,4 @@ for i, row in allenes.iterrows():
         alkenes = alkenes.append({'Compound_Name': Chem.MolToSmiles(Chem.MolFromSmiles(mol))}, ignore_index=True)
 
 start_compounds = pd.merge(alkanes, alkenes, how = 'outer')
-pickle.dump(start_compounds, open("start_compounds.p", "wb"))
+pickle.dump(start_compounds, open("save_data/start_compounds.p", "wb"))

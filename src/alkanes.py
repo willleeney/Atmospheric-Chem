@@ -122,4 +122,4 @@ for n in range(0,10): # the current hydrocarbon
             count += 1
 
 alkanes = pd.DataFrame({'Compound_Name': list(alkanes)}, columns = ['Compound_Name'])
-pickle.dump(alkanes, open("alkanes.p", "wb"))
+pickle.dump(alkanes, open("save_data/alkanes.p", "wb"))

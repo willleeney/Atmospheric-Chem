@@ -1,5 +1,5 @@
 
-start_compounds = pickle.load(open('start_compounds.p', 'rb'))
+start_compounds = pickle.load(open('save_data/start_compounds.p', 'rb'))
 compound_vps = start_compounds.copy()
 base_id = list(np.zeros(len(compound_vps)))
 locs = []
@@ -36,4 +36,4 @@ for k in range(len(compound_vps)):
 to_add = {'Compound_Name': list(compound_vps.iloc[:]['Compound_Name']), 'ID': base_id, 'Place': list(locs), 'Loc': C_locs}
 to_merge = pd.DataFrame(to_add, columns = ['Compound_Name', 'ID', 'Place', 'Loc'])
 compound_vps = pd.merge(compound_vps, to_merge)
-pickle.dump(compound_vps, open("compound_vps.p", "wb"))
+pickle.dump(compound_vps, open("save_data/compound_vps.p", "wb"))
