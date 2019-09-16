@@ -3,7 +3,7 @@ A series of .py files to procedurally generate alkane and alkene compounds. Also
 
 ## Prerequisites
   Plotly needs to be installed as the graphs will be sent to your account. Please read the installation instructions here, 
-  [link](https://plot.ly/python/getting-started/).
+  [link](https://plot.ly/python/getting-started/). Every module in lib also needs to installed to run every file. If you just want to create graphs, then only pickle, pandas, and plotly need to be installed. 
 
 ## File Description
   * alkanes.py - calculates the alkane compounds
@@ -17,5 +17,4 @@ A series of .py files to procedurally generate alkane and alkene compounds. Also
 
 
 ## License
-
 This project is licensed under the GNU License - see the LICENSE.md file for details
