@@ -2,8 +2,8 @@
 A series of .py files to procedurally generate alkane and alkene compounds. Also calculates vapour pressures and rate constants for interactive graphs. 
 
 ## Prerequisites
-  Plotly needs to be installed as the graphs will be sent to your account 
-  [link](https://plot.ly/python/getting-started/)
+  Plotly needs to be installed as the graphs will be sent to your account. Please read the installation instructions here, 
+  [link](https://plot.ly/python/getting-started/).
 
 ## File Description
   * alkanes.py - calculates the alkane compounds
