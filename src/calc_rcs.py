@@ -301,4 +301,4 @@ for lp in range(len(fun_id)):
     for i in range(len(new_chain)):
         all_compounds_rate.at[index[i], 'Rate_Constant'] = cal_rc(new_chain[i], f_group, fun_const[lp])  
 
-pickle.dump(all_compounds_rate, open('all_compounds_rate.p', 'wb'))
+pickle.dump(all_compounds_rate, open('save_data/all_compounds_rate.p', 'wb'))
