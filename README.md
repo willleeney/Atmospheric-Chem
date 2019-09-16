@@ -1,7 +1,11 @@
 # Atmospheric-Chem
 A series of .py files to procedurally generate alkane and alkene compounds. Also calculates vapour pressures and rate constants for interactive graphs. 
 
-## File Describtion 
+## Prerequisites
+  Plotly needs to be installed as the graphs will be sent to your account 
+  [link](https://plot.ly/python/getting-started/)
+
+## File Description
   * alkanes.py - calculates the alkane compounds
   * alkenes.py 	- calculates the alkenes and removes allenes 
   * my_funcs.py - functions used in more than one .py file
