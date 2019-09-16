@@ -1,8 +1,8 @@
 ################################## ADDING PARENT COMPOUND ID ######################################################
 compound_vps = pickle.load(open('save_data/compound_vps.p', 'rb'))
 start_compounds = pickle.load(open('save_data/start_compounds.p', 'rb'))
-functional_groups = ['O', 'OO', 'C=O', 'C(=O)O', '#N', 'N', 'Cl', 'Br', 'I'] # each of the initial fun groups
-f_group_start = ['O', 'OO', 'C(=O)', 'OC(=O)', 'N#', 'N', 'Cl', 'Br', 'I']
+functional_groups = ['O', 'OO', 'C=O', 'C(=O)O', 'C#N', 'N', 'Cl', 'Br', 'I'] # each of the initial fun groups
+f_group_start = ['O', 'OO', 'C(=O)', 'OC(=O)', 'N#C', 'N', 'Cl', 'Br', 'I']
 ind = []
 new_cmps = []
 IDS = []
